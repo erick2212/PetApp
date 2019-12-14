@@ -87,18 +87,8 @@ export class ProductsService {
   }
 
   public apiUsers() {
-    this.http.post('http://www.ipera4.com/users/1/3',
-    {"appUID":  "5ddc9db284284e5920cbc36f",
-    "token":  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVpZCI6IjVkZTkxYTk3ZTIwYTJjM2UxNWMxY2RlNCIsImVtYWlsIjoiamxyb3Nhc3BAaG90bWFpbC5jb20iLCJmdWxsTmFtZSI6IkdhYnJpZWwgQWNldmVkbyIsInVybEltYWdlIjpudWxsLCJpc09BdXRoMkxvZ2luIjpmYWxzZSwiYXV0aERhdGFQcm92aWRlciI6eyJuYW1lIjoicHJhc2EifSwic2FwVXNlclVJRCI6ODUsInJvbGVzIjpbeyJuYW1lIjoiUFJBU0FfVkVOVEFTX1JPTCJ9XX0sImlhdCI6MTU3NjI4MzkwMywiZXhwIjoxNTc2Mjk4MzAzfQ.cT67Iw4xeuGMGPbzPtRG5tyawALX9QD_0Pp64tJI6ks",}).subscribe(
-    data  => {
-    console.log("PUT Request is successful ", data);
-    },
-
-    error  => {
-    console.log("Rrror", error);
-    }
-    );
+    return this.http.post('http://www.ipera4.com/users/1/3',
+      {"appUID":  "5ddc9db284284e5920cbc36f",
+      "token":  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVpZCI6IjVkZTkxYTk3ZTIwYTJjM2UxNWMxY2RlNCIsImVtYWlsIjoiamxyb3Nhc3BAaG90bWFpbC5jb20iLCJmdWxsTmFtZSI6IkdhYnJpZWwgQWNldmVkbyIsInVybEltYWdlIjpudWxsLCJpc09BdXRoMkxvZ2luIjpmYWxzZSwiYXV0aERhdGFQcm92aWRlciI6eyJuYW1lIjoicHJhc2EifSwic2FwVXNlclVJRCI6ODUsInJvbGVzIjpbeyJuYW1lIjoiUFJBU0FfVkVOVEFTX1JPTCJ9XX0sImlhdCI6MTU3NjI4MzkwMywiZXhwIjoxNTc2Mjk4MzAzfQ.cT67Iw4xeuGMGPbzPtRG5tyawALX9QD_0Pp64tJI6ks"});
   }
-
-
 }
