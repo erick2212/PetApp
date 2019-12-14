@@ -1,1 +1,62 @@
-<p>product works!</p>
+<br>
+		
+  <div id="portfolio" class="portfolio-area area-padding fix">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center aniview" data-av-animation="fadeInLeft">
+            <h2>Detalle de Producto</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Start Portfolio -page -->
+        
+        
+			
+		    <div class="row align-items-center">
+				<div class="col-lg-5  aniview" data-av-animation="zoomIn" style="background-color:white">
+					<img src="../../../assets/img/productos/{{product.id}}.jpg" class="img-fluid">
+				</div>
+				<div class="col-lg-7  aniview" data-av-animation="zoomIn"  style="background-color:#e3e6e8">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<h1>{{product.nombre_Producto}}</h1>
+							<p>Categoría: {{product.categoria_Producto}}</p> 
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-justify">
+							<h5>{{product.detalle_Producto}}</h5>
+						</div>
+					</div>
+					<div class="row mt-4 mb-4">
+						<div class="col-lg-12 text-left">
+							<div class="badge badge-pill badge-info">
+								<h3>Precio: ${{product.precio_Producto}}</h3>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 text-left">
+							Some quick example text to build on the card title and make up the bulk of the card's content.
+						</div>
+						<div class="col-lg-6 text-right">
+							Product code: Some quick example text to build on the card title and make up the bulk of the card's content.
+						</div>
+                    </div>
+                    <div class="row text-right my-5">
+                        Stock disponible: {{product.cantidad_Producto}}
+                    </div>
+					<div class="row text-right my-5">
+						<div class="col-xs-12">
+							<button class="btn btn-default">Comprar</button>
+							<button class="btn btn-default" (click)="agregarCarrito(product.id)">Agregar al carrito</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+      </div>
+    </div>
+  <!-- awesome-portfolio end -->

@@ -1,1 +1,58 @@
-<p>products works!</p>
+<br>
+		
+  <div id="portfolio" class="portfolio-area area-padding fix">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center aniview" data-av-animation="fadeInLeft">
+            <h2>Productos y Promociones</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Start Portfolio -page -->
+        <div class="awesome-project-1 fix aniview" data-av-animation="zoomIn">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="awesome-menu ">
+              <ul class="project-menu">
+                <li>
+                  <a href="#" class="active" data-filter="*">Todos</a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".perros">Perros</a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".gatos">Gatos</a>
+                </li>
+                <li>
+                  <a href="#" data-filter=".accesorios">Accesorios</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="awesome-project-content">
+          <!-- single-awesome-project start -->
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 design accesorios aniview" data-av-animation="zoomIn" *ngFor="let item of misDatos">
+            <div class="card">
+			  <img src="../../../assets/img/productos/{{item.id}}.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">{{item.nombre_Producto}}</h5>
+                <p class="card-text">{{item.detalle_Producto}}</p>
+                <div class="row text-center">
+                        <a href="#" class="btn btn-primary my-3"><span class="fa fa-shopping-bag"></span> Comprar</a>
+                        <br>
+                        <button class="btn btn-primary" (click)="agregarCarrito(item.id)"><span class="fa fa-shopping-cart"></span> Agrerar al carrito</button>
+                        <br>
+                        <button type="button" class="btn btn-primary my-3" [routerLink]="['/producto', item.id]"><span class="fa fa-eye"></span> Ver</button>
+
+                </div>
+                
+			  </div>
+			</div>
+          </div>
+          <!-- single-awesome-project end -->
+      </div>
+    </div>
+  </div>
+  <!-- awesome-portfolio end -->

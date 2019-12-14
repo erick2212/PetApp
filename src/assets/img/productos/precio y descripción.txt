@@ -1,0 +1,30 @@
+precio pedigree: $600
+descripción: Alimento de 25kg adulto, para una nutrición correcta
+-----------------------
+precio dogchow: $700
+descripción: Alimento de 18kg adulto, para un gran amigo!
+-----------------------
+precio whiskas: $900
+descripción: Alimento de 20kg adulto, con los nutrientes que tu amigo más le gustan!
+-----------------------
+precio catchow: $850
+descripción: Alimento de 20kg adulto, Ayuda a fortalecer las defensas naturales
+-----------------------
+precio beneful: $739
+descripción: Alimento de 18kg adulto, Rico en Antioxidantes para un pelaje abundante
+-----------------------
+precio sobrewhiskas: $12
+descripción: Sobre de Whiskas, para consentir a tu mascota
+-----------------------
+precio sobrepedigree: $11
+descripción: Sobre de Pedigree, con un toque de filetes de res yumi!!
+-----------------------
+precio collarperro: $50
+descripción: Collar de perro, ¿Quién dice que no pueden tener glamour?
+-----------------------
+precio collargato: $70
+descripción: Collar de gato, con toque personalizable
+-----------------------
+precio carnaza: $31
+descripción: carnaza para perro, un premio bien merecido
+-----------------------

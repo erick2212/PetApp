@@ -1,0 +1,83 @@
+[
+    {
+        "id": 2,
+        "nombre_Producto": "Dogchow",
+        "categoria_Producto": "Perros",
+        "detalle_Producto": "Alimento de 18kg adulto, para un gran amigo!",
+        "cantidad_Producto": 5,
+        "precio_Producto": "700",
+        "comprado": 0
+    },
+    {
+        "id": 3,
+        "nombre_Producto": "Whiskas",
+        "categoria_Producto": "Gatos",
+        "detalle_Producto": "Alimento de 20kg adulto, con los nutrientes que tu amigo más le gustan!",
+        "cantidad_Producto": 20,
+        "precio_Producto": "900",
+        "comprado": 1
+    },
+    {
+        "id": 4,
+        "nombre_Producto": "Catchow",
+        "categoria_Producto": "Gatos",
+        "detalle_Producto": "Alimento de 20kg adulto, Ayuda a fortalecer las defensas naturales",
+        "cantidad_Producto": 15,
+        "precio_Producto": "850",
+        "comprado": 0
+    },
+    {
+        "id": 5,
+        "nombre_Producto": "Beneful",
+        "categoria_Producto": "Perros",
+        "detalle_Producto": "Alimento de 18kg adulto, Rico en Antioxidantes para un pelaje abundante",
+        "cantidad_Producto": 4,
+        "precio_Producto": "739",
+        "comprado": 0
+    },
+    {
+        "id": 6,
+        "nombre_Producto": "Sobre whiskas",
+        "categoria_Producto": "Gatos",
+        "detalle_Producto": "Sobre de Whiskas, para consentir a tu mascota",
+        "cantidad_Producto": 50,
+        "precio_Producto": "12",
+        "comprado": 0
+    },
+    {
+        "id": 7,
+        "nombre_Producto": "Sobre pedigree",
+        "categoria_Producto": "Perros",
+        "detalle_Producto": "Sobre de Pedigree, con un toque de filetes de res yumi!!",
+        "cantidad_Producto": 750,
+        "precio_Producto": "11",
+        "comprado": 1
+    },
+    {
+        "id": 8,
+        "nombre_Producto": "Collar",
+        "categoria_Producto": "Todos",
+        "detalle_Producto": "Collar, ¿Quién dice que no pueden tener glamour?",
+        "cantidad_Producto": 10,
+        "precio_Producto": "50",
+        "comprado": 0
+    },
+    {
+        "id": 1,
+        "nombre_Producto": "Collar",
+        "categoria_Producto": "Todos",
+        "detalle_Producto": "Collar, con toque personalizable",
+        "cantidad_Producto": 12,
+        "precio_Producto": "70",
+        "comprado": 0
+    },
+    {
+        "id": 1,
+        "nombre_Producto": "Carnaza",
+        "categoria_Producto": "Perros",
+        "detalle_Producto": "carnaza para perro, un premio bien merecido",
+        "cantidad_Producto": 10,
+        "precio_Producto": "31",
+        "comprado": 0
+    }
+    ]
