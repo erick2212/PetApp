@@ -8,10 +8,13 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ClienteMascotasComponent implements OnInit {
 
-  misdatos: any[] = [];
+  misdatos: any;
 
   constructor(private productsSvc: ProductsService) { 
-    
+      this.productsSvc.apiUsers().subscribe((data: any) => {
+        this.misdatos = data;
+        console.log("PUT Request is successful ", this.misdatos);
+      })
   }
 
   ngOnInit() {

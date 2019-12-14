@@ -26,6 +26,7 @@ import { VeterinarioProductosComponent } from './pages/Vet/veterinario-productos
 import { VeterinarioProductoVerComponent } from './pages/Vet/veterinario-producto-ver/veterinario-producto-ver.component';
 import { ProductComponent } from './pages/product/product.component';
 import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
+import { ClienteMascotasComponent } from './pages/cliente-mascotas/cliente-mascotas.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent , data: {title: 'Home', icon: ''}},
@@ -34,6 +35,7 @@ const routes: Routes = [
     { path: 'blog', component: BlogDetailsComponent },
     {path: 'producto/:code', component: ProductComponent, data: {title: 'Producto', icon: ''}},
     {path: 'productos', component: ProductsComponent, data: {title: 'Productos', icon: ''}},
+    {path: 'clienteMascotas', component: ClienteMascotasComponent},
     
     //admin
     { 
