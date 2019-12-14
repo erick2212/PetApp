@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const URL_API = ''; //URL API
+const URL_API = 'https://apipettde.azurewebsites.net/api/producto'; //URL API
 @Injectable({
   providedIn: 'root'
 })
