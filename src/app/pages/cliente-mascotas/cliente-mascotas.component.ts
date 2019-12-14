@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-cliente-mascotas',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteMascotasComponent implements OnInit {
 
-  constructor() { }
+  misdatos: any[] = [];
+
+  constructor(private productsSvc: ProductsService) { 
+    
+  }
 
   ngOnInit() {
   }
