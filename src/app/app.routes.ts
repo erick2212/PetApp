@@ -24,31 +24,67 @@ import { VeterinarioClienteOrdenProcedimientoVerComponent } from './pages/Vet/ve
 import { VeterinarioProductoAltaComponent } from './pages/Vet/veterinario-producto-alta/veterinario-producto-alta.component';
 import { VeterinarioProductosComponent } from './pages/Vet/veterinario-productos/veterinario-productos.component';
 import { VeterinarioProductoVerComponent } from './pages/Vet/veterinario-producto-ver/veterinario-producto-ver.component';
+import { ProductComponent } from './pages/product/product.component';
+import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
 
 const routes: Routes = [
-    { path: 'Home', component: HomeComponent },
-    { path: 'Carrito', component: CarritoComponent },
-    { path: 'Mascotas', component: MascotasComponent },
-    { path: 'Productos', component: ProductsComponent },
+    { path: 'home', component: HomeComponent , data: {title: 'Home', icon: ''}},
+    { path: 'carrito', component: CarritoComponent , data: {title: 'Carrito de Compras', icon: ''}},
+    { path: 'mascotas', component: MascotasComponent },
+    { path: 'blog', component: BlogDetailsComponent , data: {title: 'Blog', icon: ''}},
+    {path: 'producto/:code', component: ProductComponent, data: {title: 'Producto', icon: ''}},
+    {path: 'productos', component: ProductsComponent, data: {title: 'Productos', icon: ''}},
     
     //admin
-    { path: 'AdminClinicaAltaComponent', component: AdminClinicaAltaComponent},
-    { path: 'AdminClinicaVerComponent', component: AdminClinicaVerComponent},
-    { path: 'AdminClinicasComponent', component: AdminClinicasComponent},
+    { 
+        path: 'adminClinicas', 
+        component: AdminClinicasComponent,
+        children: [
+            { path: 'adminClinicaAlta', component: AdminClinicaAltaComponent, data: {title: 'Alta', icon: ''}},
+            { path: 'adminClinicaVer', component: AdminClinicaVerComponent, data: {title: 'Detalle', icon: ''}},
+            { path: '', redirectTo: 'adminClinicas', pathMatch: 'full'},
+            { path: '**', redirectTo: 'adminClinicas', pathMatch: 'full'}
+        ] ,
+        data: {title: 'Clinicas', icon: ''}
+    },
 
     //vet
-    { path: 'VeterinarioBusquedaClientesComponent', component: VeterinarioBusquedaClientesComponent},
-    { path: 'VeterinarioCitaComponent', component: VeterinarioCitaComponent},
-    { path: 'VeterinarioClienteAltaComponent', component: VeterinarioClienteAltaComponent},
-    { path: 'VeterinarioClienteOrdenesProcedimientoComponent', component: VeterinarioClienteOrdenesProcedimientoComponent},
-    { path: 'VeterinarioProductoVerComponent', component: VeterinarioProductoVerComponent},
-    { path: 'VeterinarioCitasComponent', component: VeterinarioCitasComponent},
-    { path: 'VeterinarioClienteVerComponent', component: VeterinarioClienteVerComponent},
-    { path: 'VeterinarioClienteVerSinPermisosComponent', component: VeterinarioClienteVerSinPermisosComponent},
-    { path: 'VeterinarioClienteOrdenProcedimientoAltaComponent', component: VeterinarioClienteOrdenProcedimientoAltaComponent},
-    { path: 'VeterinarioClienteOrdenProcedimientoVerComponent', component: VeterinarioClienteOrdenProcedimientoVerComponent},
-    { path: 'VeterinarioProductoAltaComponent', component: VeterinarioProductoAltaComponent},
-    { path: 'VeterinarioProductosComponent', component: VeterinarioProductosComponent},
+    { 
+        path: 'veterinarioBusquedaClientes', 
+        component: VeterinarioBusquedaClientesComponent,
+        children: [
+            { path: 'veterinarioClienteVer', component: VeterinarioClienteVerComponent, data: {title: 'Detalle', icon: ''}},
+            { path: 'veterinarioClienteAlta', component: VeterinarioClienteAltaComponent, data: {title: 'Alta', icon: ''}},
+            { path: '', redirectTo: 'veterinarioBusquedaClientes', pathMatch: 'full'},
+            { path: '**', redirectTo: 'veterinarioBusquedaClientes', pathMatch: 'full'}
+        ] ,
+        data: {title: 'Clientes', icon: ''}
+    },
+    { path: 'veterinarioClienteOrdenesProcedimiento', component: VeterinarioClienteOrdenesProcedimientoComponent},
+    { path: 'veterinarioProductoVer', component: VeterinarioProductoVerComponent},
+    { 
+        path: 'veterinarioCitas', 
+        component: VeterinarioCitasComponent,
+        children: [
+            { path: 'veterinarioCita', component: VeterinarioCitaComponent, data: {title: 'Cita', icon: ''}},
+            { path: '', redirectTo: 'veterinarioCitas', pathMatch: 'full'},
+            { path: '**', redirectTo: 'veterinarioCitas', pathMatch: 'full'}
+        ] ,
+        data: {title: 'Citas', icon: ''}
+    },
+    { path: 'veterinarioClienteVerSinPermisos', component: VeterinarioClienteVerSinPermisosComponent},
+    { path: 'veterinarioClienteOrdenProcedimientoAlta', component: VeterinarioClienteOrdenProcedimientoAltaComponent},
+    { path: 'veterinarioClienteOrdenProcedimientoVer', component: VeterinarioClienteOrdenProcedimientoVerComponent},
+    { 
+        path: 'veterinarioProductos', 
+        component: VeterinarioProductosComponent,
+        children: [
+            { path: 'veterinarioProductoAlta', component: VeterinarioProductoAltaComponent, data: {title: 'Alta', icon: ''}},
+            { path: '', redirectTo: 'veterinarioProductos', pathMatch: 'full'},
+            { path: '**', redirectTo: 'veterinarioProductos', pathMatch: 'full'}
+        ] ,
+        data: {title: 'Productos', icon: ''}
+    },
 
 
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -62,7 +98,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {useHash:true})],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}

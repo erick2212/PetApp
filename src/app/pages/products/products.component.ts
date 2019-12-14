@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { VirtualTimeScheduler } from 'rxjs';
 
@@ -9,13 +10,23 @@ import { VirtualTimeScheduler } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
 
-  productList: any[] = [];
+  misDatos: any[] = [];
+  guardado: number;
 
-  constructor(private productSvs: ProductsService) { 
-  
+  constructor(private router: ActivatedRoute, private productSvs: ProductsService) { 
+    this.productSvs.getAll().subscribe((data: any[]) => {
+      this.misDatos = data;
+      //console.log(data);
+    })
   }
 
   ngOnInit() {
+  }
+
+  agregarCarrito(idProducto: number){
+    //validar
+    //Guardar en base de datos
+    this.productSvs.register(idProducto)
   }
 
 }

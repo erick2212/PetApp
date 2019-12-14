@@ -10,15 +10,14 @@ import  PNotifyButtons  from 'pnotify/dist/es/PNotifyButtons';
 export class HomeComponent implements OnInit {
 
   constructor() { 
-    PNotifyButtons; // Initiate the module. Important!
-    PNotify.alert({
-      Title: "Titulo de la alerta",
-      text: "texto",
-      animation: "fade",
-      icon:"",
-      shadow:true,
-      delay: 1000*10,
-    }); }
+    PNotify.alert(
+      {
+        text: ':)',
+        hide: true,
+        remove: true,
+        delay: 800
+        
+      }); }
 
   ngOnInit() {
   }

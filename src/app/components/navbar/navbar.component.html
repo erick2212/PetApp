@@ -1,1 +1,69 @@
-<p>navbar works!</p>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+<header>
+        <!-- header-area start -->
+        <div id="sticker" class="header-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+    
+                <!-- Navigation -->
+                <nav class="navbar navbar-default">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                    <!-- Brand -->
+                    <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                      <!--<h1><span>Pet</span>APP</h1>-->
+                      <h1 class="animated infinite pulse "><span>Pet</span>APP</h1>
+                      <!-- Uncomment below if you prefer to use an image logo -->
+                      <!-- <img src="img/logo.png" alt="" title=""> -->
+                                    </a>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li routerLinkActive="active">
+                          <a class="page-scroll" [routerLink]="['/home']"><span class="fa fa-home"></span> Inicio</a>
+                      </li>
+                      <li routerLinkActive="active">
+                          <a class="page-scroll" [routerLink]="['/productos']"><span class="fa fa-list"></span> Productos</a>
+                      </li>
+                      <li routerLinkActive="active">
+                        <a class="page-scroll" [routerLink]="['/blog']"><span class="fa fa-newspaper-o"></span> Blog</a>
+                      </li>
+                      <li>
+                          <a href="#" class="btn btn-sm" data-toggle="modal" data-target="#modalLogin"><span class="fa fa-user"></span> Iniciar sesión</a>
+                      </li>
+                        <li routerLinkActive="active">
+                          <a [routerLink]="['/carrito']" class="btn btn-sm"><span class="fa fa-shopping-cart"></span> Carrito ({{comprados}})</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- navbar-collapse -->
+                </nav>
+                <!-- END: Navigation -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- header-area end -->
+      </header>
+      <!-- header end -->
+      <br>
+      <br>
+      <nav aria-label="breadcrumb" class="mt-5">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#"
+              ><i class="fa {{ breadcrumb.icon }}"></i> {{ breadcrumb.title }}</a
+            >
+          </li>
+        </ol>
+      </nav>
